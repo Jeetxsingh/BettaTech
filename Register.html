@@ -5,7 +5,7 @@
     <title>BettaTech Shop - Register</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script defer="true" src="register.js"></script>
+    <script defer="true" src="assets/js/register.js"></script>
 
     <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
@@ -128,32 +128,44 @@
         <div class="container">
             <div class="row align-items-center py-5">
                 <div class="col-md-8 text-white">
-                    <h1>BettaTech Sign Up Form</h1>
-                    <div>
-                        <input type="text" id="txtName" placeholder="Full Name" style="height: 35px; width: 400px;"/>
-                    </div>
-                    <div>
-                        <input type="text" id="txtAge" placeholder="Password" style="height: 35px; width: 400px; "/>
-                    </div>
-                    <div>
-                        <input type="text" id="txtEmail" placeholder="Email Address" style="height: 35px; width: 400px; " />
-                    </div>
+                    <form id="form">
+                        First Name: <input type="text" name="FirstName" size="20"><br>
+                        Last Name: <input type="text" name="LastName" size="20"><br>
+                        Email: <input type="text" name="Email" size="20"><br>
+                        Password: <input type="text" name="Password" size="20"><br>
+                        Address: <input type="text" name="Address" size="20"><br>
+                        City: <input type="text" name="City" size="20"><br>
+                        Postcode: <input type="text" name="Postcode" size="20"><br>
+                        <input type="button" value="submit" id="dl" onclick="submitForm()">
+                    </form>
 
-                    <div>
-                        <textarea id="msg" name="msg" placeholder="Mailing Address" style="height: 75px; width: 400px; "></textarea>
-                    </div>
+                    <script>
+                        //Clear form once submitted
+                        function clearForm() {
+                            document.getElementById("form").reset();
+                        }
 
-                    <div>
-                        <select id="selCountry">
-                            <option selected value="">-- Choose Country --</option>
-                            <option value="New Zealand">New Zealand</option>
-                            <option value="Japan">Japan</option>
-                            <option value="USA">USA</option>
-                        </select>
-                    </div>  
-                    <div>
-                        <input type="button" id="bt" value="Submit" onclick="saveFile()" />
-                    </div>
+                        function submitForm() {
+                            var formData = $("form").serializeArray();
+                            let csv = "data:text/csv;charset=utf-8,"; // accept data as CSV
+
+                            formData.forEach(function (item) {
+                                csv += item.value + ";"; // concat form value on csv var and add ; to create columns (you can change to , if want)
+                            });
+
+                            var encodedUri = encodeURI(csv);
+
+                            // if you want to download
+                            var downloadLink = document.createElement("a");
+                            downloadLink.setAttribute("download", "FILENAME.csv");
+                            downloadLink.setAttribute("href", encodedUri);
+                            document.body.appendChild(downloadLink); // Required for FF
+                            downloadLink.click();
+                            downloadLink.remove();
+
+                            clearForm();
+                        }
+                    </script>
                 </div>
                 <div class="col-md-4">
                     <img src="assets/img/about-hero.svg" alt="About Hero">
