@@ -128,15 +128,16 @@
         <div class="container">
             <div class="row align-items-center py-5">
                 <div class="col-md-8 text-white">
-                    <form id="form">
-                        First Name: <input type="text" name="FirstName" size="20"><br>
-                        Last Name: <input type="text" name="LastName" size="20"><br>
-                        Email: <input type="text" name="Email" size="20"><br>
-                        Password: <input type="text" name="Password" size="20"><br>
-                        Address: <input type="text" name="Address" size="20"><br>
-                        City: <input type="text" name="City" size="20"><br>
-                        Postcode: <input type="text" name="Postcode" size="20"><br>
-                        <input type="button" value="submit" id="dl" onclick="submitForm()">
+                    <form method="POST"
+                          action="https://script.google.com/macros/s/AKfycbyrUAQMm3tZa6Tr5xtm8Bb1xfuvXHyr3hU0xcPWkp_XqumFjzTeDVBV23dHsp3po98Etg/exec">
+                        <input name="FirstName" type="text" placeholder="FirstName" required>
+                        <input name="LastName" type="text" placeholder="LastName" required>
+                        <input name="Email" type="email" placeholder="Email" required>
+                        <input name="Password" type="password" placeholder="Password" required>
+                        <input name="Address" type="text" placeholder="Address" required>
+                        <input name="City" type="text" placeholder="City" required>
+                        <input name="PostCode" type="text" placeholder="PostCode" required>
+                        <button type="submit">Send</button>
                     </form>
 
                     <script>
