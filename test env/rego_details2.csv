@@ -1,4 +1,4 @@
-email_addr, IP
-ldel275@aucklanduni.ac.nz, 192.168.20.1
-bsin123@aucklanduni.ac.nz, 192.168.20.2
-mcro444@aucklanduni.ac.nz, 192.168.20.3
+ip_address
+192.168.20.1
+192.168.20.2
+192.168.20.3

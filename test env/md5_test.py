@@ -4,7 +4,7 @@ import hashlib
 IN_PATH = 'rego_details2.csv'
 OUT_PATH = 'email_hashed2.csv'
 ENCODING = 'ascii'
-HASH_COLUMNS = dict(home_addr='md5')
+HASH_COLUMNS = dict(ip_address='md5')
 
 
 def main():
