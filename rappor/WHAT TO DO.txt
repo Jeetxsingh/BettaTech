@@ -1,0 +1,43 @@
+FUCKING RAPPOR SHIT
+- Ubuntu Trusty // Google Cloud 
+
+Installed Packages
+1) https://cran.r-project.org/web/packages/limSolve/index.html
+2) https://cran.r-project.org/web/packages/glmnet/index.html
+3) https://cran.r-project.org/web/packages/ggplot2/index.html
+4) https://cran.r-project.org/web/packages/optparse/index.html
+
+Documentation / Guide
+1) https://google.github.io/rappor/doc/data-flow.html     how to start the demo
+
+https://gitlab.kingston.ac.uk/K1531112/RAPPOR/tree/master    implementation of bloom filter
+2) https://pypi.org/project/mmh3/     mmh3 hash functions
+3) https://pypi.org/project/bitarray/   bitarray -- boolean arrays
+
+https://www.chromium.org/developers/design-documents/rappor/     
+4) http://google.github.io/rappor/examples/report.html    rappor demo example
+5) 
+
+Notes: cannot run shell commands on setup, build, and demo
+
+Master Documentation on RAPPOR
+https://github.com/google/rappor/blob/master/doc/data-flow.md
+
+
+Alternative solution
+1) Not use the the algorithm as a whole yet, but use bits and pieces of it
+ie. MD5 hashing, csv runthroughs, Bloom filter from rappor repository bit by bit until it becomes unidentifiable enough -- IP address, customer ID (take format from mongoDB project)
+
+Future work
+1) 
+
+
+MD5 hashing
+
+
+CSV import
+
+
+Bloom Filter
+
+
