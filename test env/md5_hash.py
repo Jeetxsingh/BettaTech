@@ -1,10 +1,10 @@
 import csv
 import hashlib
 
-IN_PATH = 'rego_details.csv'
-OUT_PATH = 'email_hashed.csv'
+IN_PATH = 'ip_in.csv'
+OUT_PATH = 'ip_address.csv'
 ENCODING = 'ascii'
-HASH_COLUMNS = dict(email_addr='md5')
+HASH_COLUMNS = dict(ip_address='md5')
 
 
 def main():
